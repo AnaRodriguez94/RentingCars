@@ -1,0 +1,27 @@
+<h1>Administración de Reservas</h1>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Usuario</th>
+        <th>Vehículo</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí puedes usar un *ngFor para iterar sobre las reservas -->
+      <tr *ngFor="let reservation of reservations">
+        <td>{{ reservation.id }}</td>
+        <td>{{ reservation.user }}</td>
+        <td>{{ reservation.vehicle }}</td>
+        <td>{{ reservation.date }}</td>
+        <td>
+          <button (click)="editReservation(reservation.id)">Editar</button>
+          <button (click)="deleteReservation(reservation.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

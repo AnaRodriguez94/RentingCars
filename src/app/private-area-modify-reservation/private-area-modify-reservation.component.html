@@ -1,0 +1,12 @@
+<h1>Modificar Reserva</h1>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="vehicle">Vehículo:</label>
+    <input type="text" id="vehicle" [(ngModel)]="reservation.vehicle" name="vehicle" required>
+  </div>
+  <div>
+    <label for="date">Fecha:</label>
+    <input type="date" id="date" [(ngModel)]="reservation.date" name="date" required>
+  </div>
+  <button type="submit">Guardar Cambios</button>
+</form>
